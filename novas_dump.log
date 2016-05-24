@@ -1,0 +1,88 @@
+ncsim 13.10-s005
+Linux 2.6.32-573.el6.x86_64 #1 SMP Thu Jul 23 15:44:03 UTC 2015 x86_64
+CPU cores: 4
+Limit information:
+======================================
+cputime			unlimited
+filesize		unlimited
+datasize		unlimited
+stacksize		10240 kbytes
+coredumpsize	0 kbytes
+memoryuse		unlimited
+vmemoryuse		unlimited
+descriptors		4096
+memorylocked	64 kbytes
+maxproc			1024
+======================================
+(Special)Runtime environment variables:
+
+Runtime environment variables:
+USER=dcs55
+LOGNAME=dcs55
+HOME=/RAID2/COURSE/dcs/dcs55
+PATH=/RAID2/EDA/mathworks/cur/bin:/RAID2/EDA/syntest/cur/bin:/RAID2/EDA/mentor/Tessent/cur/bin:/usr/calibre/bin:/usr/calibre:/usr/laker/bin:/usr/verdi/bin:/usr/verdi/nCompare/bin:/usr/verdi/nLint/bin:/RAID2/EDA/synopsys/tmax/cur/bin:/usr/hspice/hspice/../sx_2009.09_linux/bin/:/usr/hspice/hspice/bin:/usr/hspice/hspice/linux:/usr/icc/bin:/usr/synthesis/bin/:/usr/pt/linux/syn/bin:/usr/INCISIV/tools/bin:/usr/EDI/tools/bin:/usr/mmsim/tools.lnx86/bin:/usr/ic/tools/dfII/bin:/usr/ic/tools/bin:/usr/ic/tools/dracula/bin:/usr/sbin:/usr/lib64/qt-3.3/bin:/usr/local/bin:/bin:/usr/bin
+MAIL=/var/spool/mail/dcs55
+SHELL=/bin/tcsh
+SSH_CLIENT=140.113.136.219 27926 22
+SSH_CONNECTION=140.113.136.219 27926 140.113.201.5 22
+SSH_TTY=/dev/pts/30
+TERM=xterm
+DISPLAY=localhost:15.0
+SELINUX_ROLE_REQUESTED=
+SELINUX_LEVEL_REQUESTED=
+SELINUX_USE_CURRENT_RANGE=
+HOSTTYPE=x86_64-linux
+VENDOR=unknown
+OSTYPE=linux
+MACHTYPE=x86_64
+SHLVL=1
+PWD=/RAID2/COURSE/dcs/dcs55/Lab04/vega
+GROUP=dcs
+HOST=ee05
+REMOTEHOST=nctu-wireless-nat219.nctu.edu.tw
+LS_COLORS=rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=01;05;37;41:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arj=01;31:*.taz=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lz=01;31:*.xz=01;31:*.bz2=01;31:*.tbz=01;31:*.tbz2=01;31:*.bz=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.rar=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.axv=01;35:*.anx=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=01;36:*.au=01;36:*.flac=01;36:*.mid=01;36:*.midi=01;36:*.mka=01;36:*.mp3=01;36:*.mpc=01;36:*.ogg=01;36:*.ra=01;36:*.wav=01;36:*.axa=01;36:*.oga=01;36:*.spx=01;36:*.xspf=01;36:
+CVS_RSH=ssh
+G_BROKEN_FILENAMES=1
+SSH_ASKPASS=/usr/libexec/openssh/gnome-ssh-askpass
+LANG=C
+LESSOPEN=||/usr/bin/lesspipe.sh %s
+QTDIR=/usr/lib64/qt-3.3
+QTINC=/usr/lib64/qt-3.3/include
+QTLIB=/usr/lib64/qt-3.3/lib
+LD_LIBRARY_PATH=/usr/verdi/share/PLI/IUS/LINUX:/usr/hspice/hspice/linux:/usr/ic/tools/lib:/usr/X11R6/lib:/usr/lib64:/lib64
+LIBPATH=/usr/hspice/hspice/linux
+SHLIB_PATH=/usr/hspice/hspice/linux:/usr/lib64
+MANPATH=/usr/share/man:/usr/man:/usr/X11R6/man:/usr/lib/perl5/man:/usr/kerberos/man:/usr/local/man
+LC_CTYPE=iso_8859_1
+LC_ALL=C
+OA_HOME=/usr/ic/oa_v22.41.029
+HSP_HOME=/usr/hspice/hspice
+SYNOPSYS_TMAX=/RAID2/EDA/synopsys/tmax/cur
+MGC_TMPDIR=/tmp
+MGC_LOCATION_MAP=NO_MAP
+MGC_HOME=/usr/calibre
+SYNTEST=/RAID2/EDA/syntest/cur
+CC=gcc
+ENABLE_STARTUP_LOCALE=iso_8859_1
+LM_LICENSE_FILE=5280@lsnctu:26585@lsnctu:5219@lsnctu:1717@lsnctu
+MATLAB=/RAID2/EDA/mathworks/cur
+HOSTNAME=ee05
+/misc/RAID2/COURSE/dcs/dcs55/Lab04/vega/INCA_libs/irun.lnx86.13.10.nc/svpp.ts
+CDS_ARCH=lnx86
+NCRUNMODE=irun:./INCA_libs/irun.lnx86.13.10.nc
+IRUNBATCH=FALSE
+IMPERAS_PORT_FILE=.vsp_ovp_gdb_port
+TCL_LIBRARY=/usr/INCISIV/tools/inca/files/tcl/library
+Runtime command line arguments:
+argv[0]=irun
+argv[1]=CountDown_DCS55.v
+78 profile - 100
+          CPU/Mem usage: 0.050 sys,  0.050 user,  45.72M sys,  0.00M vm
+79 VC callback profile - scalar:0 vector:0
+80 Tue May 24 00:49:39 2016
+81 pliAppInit
+82 *Verdi3* : Enable Parallel Dumping.
+83 pliAppMiscSet: New Sim Round
+84 pliEntryInit
+85 LIBSSCORE=found /usr/verdi/share/PLI/IUS/LINUX/libsscore_ius131.so through $LD_LIBRARY_PATH setting.
+86 Sim process exit

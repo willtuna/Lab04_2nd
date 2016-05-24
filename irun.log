@@ -1,0 +1,56 @@
+irun: 13.10-s005: (c) Copyright 1995-2013 Cadence Design Systems, Inc.
+TOOL:	irun	13.10-s005: Started on May 24, 2016 at 00:49:36 CST
+irun
+	CountDown_DCS55.v
+Recompiling... reason: file './CountDown_DCS55.v' is newer than expected.
+	expected: Mon May 23 21:58:48 2016
+	actual:   Mon May 23 22:00:53 2016
+file: CountDown_DCS55.v
+	module worklib.fsm:v
+		errors: 0, warnings: 0
+	module worklib.twodigit2ascii:v
+		errors: 0, warnings: 0
+	module worklib.spi_interface:v
+		errors: 0, warnings: 0
+	module worklib.CountDown_dcs55:v
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+	Top level design units:
+		CountDown_dcs55
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.CountDown_dcs55:v <0x0c06faf2>
+			streams:   0, words:     0
+		worklib.FF:v <0x35df8a89>
+			streams:   0, words:     0
+		worklib.debounce:v <0x39ca2fdf>
+			streams:   0, words:     0
+		worklib.debounce_clk:v <0x3aa0e299>
+			streams:   0, words:     0
+		worklib.fsm:v <0x7dd976bd>
+			streams:   0, words:     0
+		worklib.spi_interface:v <0x6fe2022b>
+			streams:   0, words:     0
+		worklib.twodigit2ascii:v <0x2cbd8560>
+			streams:   0, words:     0
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		             Instances  Unique
+		Modules:             8       7
+		Registers:          29      27
+		Scalar wires:        1       -
+		Expanded wires:     12       1
+		Vectored wires:      2       -
+		Always blocks:      20      18
+		Cont. assignments:   0       2
+	Writing initial simulation snapshot: worklib.CountDown_dcs55:v
+Loading snapshot worklib.CountDown_dcs55:v .................... Done
+*Verdi3* Loading libsscore_ius131.so
+*Verdi3* : Enable Parallel Dumping.
+ncsim> source /usr/INCISIV/tools/inca/files/ncsimrc
+ncsim> run
+ncsim: *W,RNQUIE: Simulation is complete.
+ncsim> exit
+TOOL:	irun	13.10-s005: Exiting on May 24, 2016 at 00:49:39 CST  (total: 00:00:03)

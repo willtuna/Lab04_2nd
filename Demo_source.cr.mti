@@ -1,0 +1,61 @@
+D:/WillVegapunk???/GitHub/Lab04/Source_Code/command_lookup.v {0 {vlog -work work -stats=none D:/WillVegapunk???/GitHub/Lab04/Source_Code/command_lookup.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module command_lookup
+** Error: D:/WillVegapunk的文件/GitHub/Lab04/Source_Code/command_lookup.v(43): (vlog-2110) Illegal reference to net array "command".
+
+** Error (suppressible): (vlog-2997) D:/WillVegapunk的文件/GitHub/Lab04/Source_Code/command_lookup.v(87): Illegal assignment to type 'wire[7:0] $[0:33]' from type 'reg[271:0]': Cannot assign a packed type to an unpacked type.
+
+
+} {4.0 5.0} {}} D:/WillVegapunk???/GitHub/Lab04/Source_Code/debounce_clk_div.v {1 {vlog -work work -stats=none D:/WillVegapunk???/GitHub/Lab04/Source_Code/debounce_clk_div.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module Debounce_Clk_Div
+
+Top level modules:
+	Debounce_Clk_Div
+
+} {} {}} D:/WillVegapunk???/GitHub/Lab04/Source_Code/dff.v {1 {vlog -work work -stats=none D:/WillVegapunk???/GitHub/Lab04/Source_Code/dff.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module DFF
+
+Top level modules:
+	DFF
+
+} {} {}} D:/WillVegapunk???/GitHub/Lab04/Source_Code/master_interface.v {1 {vlog -work work -stats=none D:/WillVegapunk???/GitHub/Lab04/Source_Code/master_interface.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module master_interface
+
+Top level modules:
+	master_interface
+
+} {} {}} D:/WillVegapunk???/GitHub/Lab04/Source_Code/spi_interface.v {1 {vlog -work work -stats=none D:/WillVegapunk???/GitHub/Lab04/Source_Code/spi_interface.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module spi_interface
+
+Top level modules:
+	spi_interface
+
+} {} {}} D:/WillVegapunk???/GitHub/Lab04/Source_Code/testbench_source.v {1 {vlog -work work -stats=none D:/WillVegapunk???/GitHub/Lab04/Source_Code/testbench_source.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module PmodCLS_Demo
+-- Compiling module top
+
+Top level modules:
+	top
+
+} {} {}} D:/WillVegapunk???/GitHub/Lab04/Source_Code/three_bit_debouncer.v {1 {vlog -work work -stats=none D:/WillVegapunk???/GitHub/Lab04/Source_Code/three_bit_debouncer.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module Debounce_Clk_Div
+-- Compiling module DFF
+-- Compiling module Three_Bit_Debouncer
+
+Top level modules:
+	Three_Bit_Debouncer
+
+} {} {}} D:/WillVegapunk???/GitHub/Lab04/Source_Code/PmodCLS_Demo.v {1 {vlog -work work -stats=none D:/WillVegapunk???/GitHub/Lab04/Source_Code/PmodCLS_Demo.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module PmodCLS_Demo
+
+Top level modules:
+	PmodCLS_Demo
+
+} {} {}}

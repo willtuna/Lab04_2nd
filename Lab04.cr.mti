@@ -1,0 +1,97 @@
+D:/WillVegapunk???/GitHub/Lab04/vega/spi_interface.v {1 {vlog -work work -stats=none D:/WillVegapunk???/GitHub/Lab04/vega/spi_interface.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module spi_interface
+
+Top level modules:
+	spi_interface
+
+} {} {}} D:/WillVegapunk???/GitHub/Lab04/vega/CountDown_DCS55.v {1 {vlog -work work -stats=none D:/WillVegapunk???/GitHub/Lab04/vega/CountDown_DCS55.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module debounce
+-- Compiling module FF
+-- Compiling module debounce_clk
+-- Compiling module fsm
+-- Compiling module twodigit2ascii
+-- Compiling module spi_interface
+-- Compiling module CountDown_dcs55
+
+Top level modules:
+	CountDown_dcs55
+
+} {} {}} D:/WillVegapunk???/GitHub/Lab04/vega/testbench.v {1 {vlog -work work -stats=none D:/WillVegapunk???/GitHub/Lab04/vega/testbench.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module debounce
+-- Compiling module FF
+-- Compiling module debounce_clk
+-- Compiling module fsm
+-- Compiling module twodigit2ascii
+-- Compiling module spi_interface
+-- Compiling module CountDown_dcs55
+-- Compiling module testbench_top
+
+Top level modules:
+	testbench_top
+
+} {} {}} D:/WillVegapunk???/GitHub/Lab04/vega/spi_interface.v {1 {vlog -work work -stats=none D:/WillVegapunk???/GitHub/Lab04/vega/spi_interface.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module spi_interface
+
+Top level modules:
+	spi_interface
+
+} {} {}} D:/WillVegapunk???/GitHub/Lab04/vega/testbench.v {1 {vlog -work work -stats=none D:/WillVegapunk???/GitHub/Lab04/vega/testbench.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module debounce
+-- Compiling module FF
+-- Compiling module debounce_clk
+-- Compiling module CountDown_dcs55
+-- Compiling module testbench_top
+
+Top level modules:
+	testbench_top
+
+} {} {}} D:/WillVegapunk???/GitHub/Lab04/vega/CountDown_DCS55.v {1 {vlog -work work -stats=none D:/WillVegapunk???/GitHub/Lab04/vega/CountDown_DCS55.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module debounce
+-- Compiling module FF
+-- Compiling module debounce_clk
+-- Compiling module CountDown_dcs55
+
+Top level modules:
+	CountDown_dcs55
+
+} {} {}} D:/WillVegapunk???/GitHub/Lab04/vega/Debounce.v {1 {vlog -work work -stats=none D:/WillVegapunk???/GitHub/Lab04/vega/Debounce.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module debounce
+-- Compiling module FF
+-- Compiling module debounce_clk
+
+Top level modules:
+	debounce
+
+} {} {}} D:/WillVegapunk???/GitHub/Lab04/vega/Debounce.v {1 {vlog -work work -stats=none D:/WillVegapunk???/GitHub/Lab04/vega/Debounce.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module debounce
+-- Compiling module FF
+-- Compiling module debounce_clk
+
+Top level modules:
+	debounce
+
+} {} {}} D:/WillVegapunk???/GitHub/Lab04/vega/FSM.v {1 {vlog -work work -stats=none D:/WillVegapunk???/GitHub/Lab04/vega/FSM.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module fsm
+-- Compiling module twodigit2ascii
+
+Top level modules:
+	fsm
+
+} {} {}} D:/WillVegapunk???/GitHub/Lab04/vega/FSM.v {1 {vlog -work work -stats=none D:/WillVegapunk???/GitHub/Lab04/vega/FSM.v
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module fsm
+-- Compiling module twodigit2ascii
+
+Top level modules:
+	fsm
+
+} {} {}}
