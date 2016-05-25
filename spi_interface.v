@@ -37,7 +37,7 @@ module spi_interface(
 	// ===========================================================================
     input clk;
     input rst;
-    input [7:0] send_data;
+    input [47:0] send_data;
     input begin_transmission;
     input slave_select;
     input miso;
@@ -72,12 +72,12 @@ module spi_interface(
 	reg sclk_previous;
 	
 	// Determines the number of bits to send/receive
-	parameter [3:0] RX_COUNT_MAX = 4'h8;
+	parameter [5:0] RX_COUNT_MAX = 6'd48;
 	// The number of data bits sent/received during data transmission
-	reg [3:0] rx_count;
+	reg [5:0] rx_count;
 
 	// Holds the data being sent/received
-	reg [7:0] shift_register;
+	reg [47:0] shift_register;
 	 
 	// ===========================================================================
 	// 										Implementation
@@ -115,11 +115,11 @@ module spi_interface(
 									if(rx_count < RX_COUNT_MAX) begin
 											// Send bit
 											if(sclk_previous == 1'b1 && sclk_buffer == 1'b0) begin
-													mosi <= shift_register[7];
+													mosi <= shift_register[47];
 											end
 											// Recieve bit
 											else if(sclk_previous == 1'b0 && sclk_buffer == 1'b1) begin
-													shift_register[7:1] <= shift_register[6:0];
+													shift_register[47:1] <= shift_register[46:0];
 													shift_register[0] <= miso;
 													rx_count <= rx_count + 1'b1;
 											end

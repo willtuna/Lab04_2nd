@@ -37,7 +37,7 @@ input [5:0]	input_value; // value from 0  to 63
 
 
 //------------------------ output -------------------------
-output reg [7:0] data_out;
+output reg [47:0] data_out;
 
 output reg slave_select, begin_transmission;
 //           done           done
@@ -58,9 +58,8 @@ reg [2:0] current_state, next_state;
 //			 done			done
 
 reg [26:0] delay_cnt;
-parameter delay_cnt_max =
-// 27'd125_000_000;
-   27'd125_00;
+parameter delay_cnt_max =  27'd125_000_000;
+//   27'd125_00;
 
 //  ---------------- Put the current value to output the ascii code for output
 		twodigit2ascii ascii_decoder(current_value, ascii_out);
@@ -202,12 +201,13 @@ parameter delay_cnt_max =
 				    default:
 								slave_select <= 1'b1;
 				endcase*/
-				slave_select <= 1'b0;
+				if(rst) slave_select <= 1'b1;
+				else slave_select <= 1'b0;
 		end
 
 
 //    --------------            Display Command Counter ------------------------------
-		reg [3:0] count_end;
+/*		reg [3:0] count_end;
 
 		always@(end_transmission or rst)begin
 				if(rst)begin
@@ -222,11 +222,12 @@ parameter delay_cnt_max =
 						count_end <= count_end;
 				end
 		end
+*/
 // -------------------------- end_display -----------------------------		
 		always@(*)begin
 				case(current_state)
 						`display_state:
-										if(count_end == 4'd6)
+										if(end_transmission == 1'b1)
 												end_display = 1'b1;
 										else
 												end_display = 1'b0;
@@ -236,7 +237,7 @@ parameter delay_cnt_max =
 		end
 
 //     --------------------- Command Line Sequence -------------------------------------
-
+/*
 		always@(*)begin
 				case(count_end)
 						4'd0:			data_out[7:0]= 8'h1B;		// Esc
@@ -253,20 +254,20 @@ parameter delay_cnt_max =
 
 				endcase
 		end
+*/
+always@(posedge clk)begin
+		if(rst) data_out[47:0] <= 48'b0;
+		else data_out[47:0] <= {24'h1B5B6A,ascii_out[15:8],ascii_out[7:0],8'h00};
+end
 
 
 reg  first_begin_done;
 always@(clk)begin
 		if(current_state == `display_state)begin
-		case(count_end)
-		    'd0:	if(begin_transmission == 1'b1)
+		    		if(begin_transmission == 1'b1)
 						first_begin_done <= 1'b1;
 				    else 
 						first_begin_done <= first_begin_done;
-
-			default:
-						first_begin_done <= 1'b0;
-		endcase
 		end
 		else
 						first_begin_done <= 1'b0;
@@ -290,9 +291,7 @@ end
 				`display_state:
 								if(end_display == 1'b1) 
 										begin_transmission <= 1'b0;
-								else if(count_end == 'd0 && first_begin_done == 1'b0) 
-										begin_transmission <= 1'b1;
-								else if(count_end < 'd6  && end_buf[3] == 1'b1)
+								else if(end_display == 'd0 && first_begin_done == 1'b0) 
 										begin_transmission <= 1'b1;
 								else
 										begin_transmission <= 1'b0;

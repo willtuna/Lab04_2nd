@@ -26,12 +26,12 @@ module CountDown_dcs55(
 
 
 		wire  end_transmission;
-		wire  [7:0] data_out;
+		wire  [47:0] data_out;
 		wire begin_transmission;
 	//	wire [5:0] d_input_value;
 		
 
-		fsm MasterFSM(clk,set,6'd50,turn_zero,start,suspend,restart,end_transmission,rst, data_out, ss ,begin_transmission, state );
+		fsm MasterFSM(clk,set,input_value,turn_zero,start,suspend,restart,end_transmission,rst, data_out, ss ,begin_transmission, state );
 
 		spi_interface spi(clk,rst,data_out,begin_transmission,ss,miso,end_transmission,mosi,sclk);
 
