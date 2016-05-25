@@ -3,12 +3,11 @@
 
 
 // Finite State Machine
-`define set_state			 3'b000
-`define count_down_state     3'b001
-`define suspend_state        3'b011
-`define display_state        3'b101
-`define finish_state         3'b111
-`define delay_display        3'b100
+`define set_state			 3'b000//0
+`define count_down_state     3'b001//1
+`define display_state        3'b101//2
+`define delay_display        3'b100//3
+`define finish_state         3'b111//4
 
 
 module fsm(		
@@ -19,7 +18,6 @@ module fsm(
 				turn_zero,
 				start,
 				suspend,
-				resume,
 				restart,
 				end_transmission,
 				rst,
@@ -31,7 +29,7 @@ module fsm(
 				);
 
 //   ---------------------- inpput ----------------------
-input clk,set,start,suspend,resume,restart,rst,turn_zero, end_transmission;
+input clk,set,start,suspend,restart,rst,turn_zero,end_transmission;
                                                                           
 input [5:0]	input_value; // value from 0  to 63
 
@@ -53,14 +51,17 @@ output reg [5:0] state;
 reg [5:0] set_value, current_value;
 //           done         done
 
-reg  sus_click, continue,finish, end_display;
-//		done		done	done   done
+reg  sus_click,finish, end_display;
+//		done	done   done
 
 reg [2:0] current_state, next_state;
 //			 done			done
 
 reg [26:0] delay_cnt;
-parameter delay_cnt_max = 27'd100_000;
+parameter delay_cnt_max =
+// 27'd125_000_000;
+   27'd125_00;
+
 //  ---------------- Put the current value to output the ascii code for output
 		twodigit2ascii ascii_decoder(current_value, ascii_out);
 
@@ -88,15 +89,8 @@ parameter delay_cnt_max = 27'd100_000;
 								    else
 										next_state = current_state;
 						`count_down_state:
-								    if	   (sus_click == 1'b1 && continue == 1'b0)
-										next_state = `suspend_state;
-								    else if(sus_click == 1'b0 && continue == 1'b1)
+								    if(sus_click == 1'b0)
 										next_state = `display_state;
-								    else
-										next_state = current_state;
-						`suspend_state:
-								    if(sus_click == 1'b0 && continue == 1'b1)
-										next_state = `count_down_state;
 								    else
 										next_state = current_state;
 						`display_state:
@@ -124,7 +118,7 @@ parameter delay_cnt_max = 27'd100_000;
 								
 // ------------------------------- CurrentValue SetValue CL logic ----------------------
 //               Current Value Change for each transition of state
-		always@(current_state or set  or rst)begin
+		always@(posedge clk)begin
 				if(rst)begin
 						current_value <= 6'd0;
 						set_value     <= 6'd0;
@@ -147,9 +141,16 @@ parameter delay_cnt_max = 27'd100_000;
 														current_value <= 6'd0;
 												else if(restart)
 														current_value <= set_value;
+												else if(sus_click)
+														current_value <= current_value;
 												else
 														current_value <= current_value -1;
 										end
+								`delay_display:
+												if(restart)
+														current_value <= set_value;
+												else
+														current_value <= current_value;
 
 								default:begin
 										current_value <= current_value;
@@ -160,15 +161,13 @@ parameter delay_cnt_max = 27'd100_000;
 		end
 
 
-// ----------------------------------       sus_click & continue ------------------------
+// ----------------------------------       sus_click ------------------------
 		always@(*)begin
-				if(suspend == 1'b1 && resume == 1'b0)begin
+				if(suspend == 1'b1 )begin
 						sus_click = 1'b1;
-						continue = 1'b0;
 				end
 				else	begin
 						sus_click = 1'b0;
-						continue = 1'b1;
 				end
 		end
 // ----------------------------------   finish ----------------------------------
@@ -186,10 +185,10 @@ parameter delay_cnt_max = 27'd100_000;
 
 // ----------------------- Slave Select  ----------------------------------------
 
-		always@(*)begin
-				case(current_state)
+		always@(posedge clk)begin
+				/*case(current_state)
 					`count_down_state:
-								    if(sus_click == 1'b0 && continue == 1'b1)
+								    if(sus_click == 1'b0 )
 										slave_select <= 1'b0;
 									else
 										slave_select <= 1'b1;
@@ -202,8 +201,11 @@ parameter delay_cnt_max = 27'd100_000;
 										slave_select <= 1'b0;
 				    default:
 								slave_select <= 1'b1;
-				endcase
+				endcase*/
+				slave_select <= 1'b0;
 		end
+
+
 //    --------------            Display Command Counter ------------------------------
 		reg [3:0] count_end;
 
@@ -247,23 +249,55 @@ parameter delay_cnt_max = 27'd100_000;
 						4'd5:          data_out[7:0]= 8'h00;       // NULL
 						                    
 				default:
-								data_out[7:0] = 8'h00;
+								data_out[7:0] = 8'h1B;
 
 				endcase
 		end
 
 
+reg  first_begin_done;
+always@(clk)begin
+		if(current_state == `display_state)begin
+		case(count_end)
+		    'd0:	if(begin_transmission == 1'b1)
+						first_begin_done <= 1'b1;
+				    else 
+						first_begin_done <= first_begin_done;
+
+			default:
+						first_begin_done <= 1'b0;
+		endcase
+		end
+		else
+						first_begin_done <= 1'b0;
+
+end
+
+
+reg [3:0] end_buf;
+always@(posedge clk)begin
+				if(rst) end_buf <= 4'b0;
+				else begin
+						end_buf[0] <= end_transmission;
+						end_buf[3:1] <= end_buf [2:0];
+				end
+end
+
 //                    May having Bug Issue ---------------
 // ------------------------- Begin_Transmission -------------------------------
-		always@(*)begin
+		always@(posedge clk)begin
 		   case(current_state)
 				`display_state:
 								if(end_display == 1'b1) 
-										begin_transmission = 1'b0;
+										begin_transmission <= 1'b0;
+								else if(count_end == 'd0 && first_begin_done == 1'b0) 
+										begin_transmission <= 1'b1;
+								else if(count_end < 'd6  && end_buf[3] == 1'b1)
+										begin_transmission <= 1'b1;
 								else
-										begin_transmission = 1'b1;
+										begin_transmission <= 1'b0;
 				default:
-								begin_transmission = 1'b0;
+								begin_transmission <= 1'b0;
 		   endcase
 
 		end
@@ -275,7 +309,10 @@ parameter delay_cnt_max = 27'd100_000;
 						delay_cnt <= 'd0;
 				else begin
 						case(current_state)
-								`delay_display:  if(delay_cnt < delay_cnt_max)
+								`delay_display:  
+												 if(sus_click || restart)
+														delay_cnt <= delay_cnt;
+												 else if(delay_cnt < delay_cnt_max)
 														delay_cnt <= delay_cnt + 'd1;
 												 else
 														delay_cnt <= 'd0;
@@ -296,16 +333,14 @@ parameter delay_cnt_max = 27'd100_000;
 										state = 6'b000_001;
 						`count_down_state:
 										state = 6'b000_010;
-						`suspend_state:
-										state = 6'b010_000;
 						`display_state:
 										state = 6'b000_100;
 						`delay_display://             Newly Add Display Delay
 										state = 6'b001_000;
 						`finish_state:
-										state = 6'b100_000;
+										state = 6'b010_000;
 						default:
-										state = 6'b000_000;
+										state = 6'b100_000;
 						endcase
 				end
 		end

@@ -9,26 +9,26 @@ z2
 cModel Technology
 dC:/Users/user/Desktop/DigitalSystemLab/LabMidterm
 vCountDown_dcs55
-Z0 !s110 1464103814
+Z0 !s110 1464171978
 !i10b 1
-!s100 I:RDXI<L1EB7jjFU7K[_C3
-I`mZCQ1:A]Qc^cYbk^SYH<1
+!s100 LiQ6i4[hS9BSZcQ3=2;Se2
+I@UMYfPfGejSlj:[jnbVaQ1
 Z1 VDg1SIo80bB@j0V0VzS_@n1
 Z2 dC:/Users/user/Desktop/DigitalSystemLab/Lab04
-Z3 w1464103530
+w1464158930
 8C:/Users/user/Desktop/DigitalSystemLab/Lab04/CountDown_DCS55.v
 FC:/Users/user/Desktop/DigitalSystemLab/Lab04/CountDown_DCS55.v
 L0 4
-Z4 OP;L;10.4a;61
+Z3 OP;L;10.4a;61
 r1
 !s85 0
 31
-Z5 !s108 1464103814.000000
+Z4 !s108 1464171978.000000
 !s107 spi_interface.v|FSM.v|Debounce.v|C:/Users/user/Desktop/DigitalSystemLab/Lab04/CountDown_DCS55.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/user/Desktop/DigitalSystemLab/Lab04/CountDown_DCS55.v|
 !s101 -O0
 !i113 1
-Z6 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact -O0
+Z5 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact -O0
 n@count@down_dcs55
 vdebounce
 R0
@@ -37,20 +37,20 @@ R0
 I2DHL3MzA3FPQ]X5R:nM3U0
 R1
 R2
-R3
+Z6 w1464103530
 Z7 8C:/Users/user/Desktop/DigitalSystemLab/Lab04/Debounce.v
 Z8 FC:/Users/user/Desktop/DigitalSystemLab/Lab04/Debounce.v
 L0 4
-R4
+R3
 r1
 !s85 0
 31
-R5
+R4
 Z9 !s107 C:/Users/user/Desktop/DigitalSystemLab/Lab04/Debounce.v|
 Z10 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/user/Desktop/DigitalSystemLab/Lab04/Debounce.v|
 !s101 -O0
 !i113 1
-R6
+R5
 vdebounce_clk
 R0
 !i10b 1
@@ -58,20 +58,20 @@ R0
 IoWTb_9b?hLiEU]@hWVK2a3
 R1
 R2
-R3
+R6
 R7
 R8
 L0 49
-R4
+R3
 r1
 !s85 0
 31
-R5
+R4
 R9
 R10
 !s101 -O0
 !i113 1
-R6
+R5
 vDebounce_Clk_Div
 Z11 !s110 1464094074
 !i10b 1
@@ -83,7 +83,7 @@ w1340252982
 8D:/WillVegapunk的文件/GitHub/Lab04/Source_Code/debounce_clk_div.v
 FD:/WillVegapunk的文件/GitHub/Lab04/Source_Code/debounce_clk_div.v
 Z12 L0 22
-R4
+R3
 r1
 !s85 0
 31
@@ -92,7 +92,7 @@ Z13 !s108 1464094073.000000
 !s90 -reportprogress|300|-work|work|-stats=none|D:/WillVegapunk的文件/GitHub/Lab04/Source_Code/debounce_clk_div.v|
 !s101 -O0
 !i113 1
-R6
+R5
 n@debounce_@clk_@div
 vDFF
 R11
@@ -105,7 +105,7 @@ w1340253336
 8D:/WillVegapunk的文件/GitHub/Lab04/Source_Code/dff.v
 FD:/WillVegapunk的文件/GitHub/Lab04/Source_Code/dff.v
 L0 21
-R4
+R3
 r1
 !s85 0
 31
@@ -114,7 +114,7 @@ Z14 !s108 1464094074.000000
 !s90 -reportprogress|300|-work|work|-stats=none|D:/WillVegapunk的文件/GitHub/Lab04/Source_Code/dff.v|
 !s101 -O0
 !i113 1
-R6
+R5
 n@d@f@f
 vFF
 R0
@@ -123,42 +123,42 @@ R0
 I:>IQW6AKSMhS0@8;QZ``H1
 R1
 R2
-R3
+R6
 R7
 R8
 L0 25
-R4
+R3
 r1
 !s85 0
 31
-R5
+R4
 R9
 R10
 !s101 -O0
 !i113 1
-R6
+R5
 n@f@f
 vfsm
 R0
 !i10b 1
-!s100 1X3@8h8X9eYMa=hL7]G1C1
-I2odJGYhH;n:bO1T<o@^_L1
+!s100 faGzhA3AOcnl97C?Izbfz3
+Im=81@RP;JzjE>>Nmi>BZN3
 R1
 R2
-Z15 w1464103812
+Z15 w1464171683
 Z16 8C:/Users/user/Desktop/DigitalSystemLab/Lab04/FSM.v
 Z17 FC:/Users/user/Desktop/DigitalSystemLab/Lab04/FSM.v
-L0 14
-R4
+L0 13
+R3
 r1
 !s85 0
 31
-R5
+R4
 Z18 !s107 C:/Users/user/Desktop/DigitalSystemLab/Lab04/FSM.v|
 Z19 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/user/Desktop/DigitalSystemLab/Lab04/FSM.v|
 !s101 -O0
 !i113 1
-R6
+R5
 vmaster_interface
 R11
 !i10b 1
@@ -170,7 +170,7 @@ w1340689332
 8D:/WillVegapunk的文件/GitHub/Lab04/Source_Code/master_interface.v
 FD:/WillVegapunk的文件/GitHub/Lab04/Source_Code/master_interface.v
 R12
-R4
+R3
 r1
 !s85 0
 31
@@ -179,7 +179,7 @@ R14
 !s90 -reportprogress|300|-work|work|-stats=none|D:/WillVegapunk的文件/GitHub/Lab04/Source_Code/master_interface.v|
 !s101 -O0
 !i113 1
-R6
+R5
 vPmodCLS_Demo
 R11
 !i10b 1
@@ -191,7 +191,7 @@ w1340689292
 8D:\WillVegapunk的文件\GitHub\Lab04\Source_Code\PmodCLS_Demo.v
 FD:\WillVegapunk的文件\GitHub\Lab04\Source_Code\PmodCLS_Demo.v
 L0 26
-R4
+R3
 r1
 !s85 0
 31
@@ -200,50 +200,50 @@ Z20 !s107 D:\WillVegapunk的文件\GitHub\Lab04\Source_Code\PmodCLS_Demo.v|D:/WillV
 Z21 !s90 -reportprogress|300|-work|work|-stats=none|D:/WillVegapunk的文件/GitHub/Lab04/Source_Code/testbench_source.v|
 !s101 -O0
 !i113 1
-R6
+R5
 n@pmod@c@l@s_@demo
 vspi_interface
-!s110 1464103815
+R0
 !i10b 1
 !s100 K8<@Sb@GNXJ12SUId;Bjf0
 IKJdk4WQ2X9c1^EJiX]VUB3
 R1
 R2
-R3
+w1463634610
 8C:/Users/user/Desktop/DigitalSystemLab/Lab04/spi_interface.v
 FC:/Users/user/Desktop/DigitalSystemLab/Lab04/spi_interface.v
 L0 23
-R4
+R3
 r1
 !s85 0
 31
-!s108 1464103815.000000
+R4
 !s107 C:/Users/user/Desktop/DigitalSystemLab/Lab04/spi_interface.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/user/Desktop/DigitalSystemLab/Lab04/spi_interface.v|
 !s101 -O0
 !i113 1
-R6
+R5
 vtestbench_top
 R0
 !i10b 1
-!s100 Xe2GZioP7RL_CQF^>ILVJ2
-IK28DYNL5g?UGIHk9oO3_^0
+!s100 NTRA9D8LG=R>gn1jjRN6S0
+I9de>SlBf7j[dkN3g9z99L1
 R1
 R2
-R3
+w1464159121
 8C:/Users/user/Desktop/DigitalSystemLab/Lab04/testbench.v
 FC:/Users/user/Desktop/DigitalSystemLab/Lab04/testbench.v
 L0 4
-R4
+R3
 r1
 !s85 0
 31
-R5
+R4
 !s107 spi_interface.v|FSM.v|Debounce.v|CountDown_dcs55.v|C:/Users/user/Desktop/DigitalSystemLab/Lab04/testbench.v|
 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/user/Desktop/DigitalSystemLab/Lab04/testbench.v|
 !s101 -O0
 !i113 1
-R6
+R5
 vThree_Bit_Debouncer
 !s110 1464094073
 !i10b 1
@@ -255,7 +255,7 @@ w1464093656
 8D:/WillVegapunk的文件/GitHub/Lab04/Source_Code/three_bit_debouncer.v
 FD:/WillVegapunk的文件/GitHub/Lab04/Source_Code/three_bit_debouncer.v
 L0 24
-R4
+R3
 r1
 !s85 0
 31
@@ -264,7 +264,7 @@ R13
 !s90 -reportprogress|300|-work|work|-stats=none|D:/WillVegapunk的文件/GitHub/Lab04/Source_Code/three_bit_debouncer.v|
 !s101 -O0
 !i113 1
-R6
+R5
 n@three_@bit_@debouncer
 vtop
 R11
@@ -277,7 +277,7 @@ w1464093980
 8D:/WillVegapunk的文件/GitHub/Lab04/Source_Code/testbench_source.v
 FD:/WillVegapunk的文件/GitHub/Lab04/Source_Code/testbench_source.v
 L0 3
-R4
+R3
 r1
 !s85 0
 31
@@ -286,25 +286,25 @@ R20
 R21
 !s101 -O0
 !i113 1
-R6
+R5
 vtwodigit2ascii
 R0
 !i10b 1
-!s100 cM`^eML_0Ra94a5jF_D_30
-IWG_HhMHeF>QZ:j`]CefBI3
+!s100 hCgCLOY1O?cEm4i?c0AUz0
+Id2[Nc_<J>E=<`aNF2<KE^1
 R1
 R2
 R15
 R16
 R17
-L0 338
-R4
+L0 373
+R3
 r1
 !s85 0
 31
-R5
+R4
 R18
 R19
 !s101 -O0
 !i113 1
-R6
+R5
